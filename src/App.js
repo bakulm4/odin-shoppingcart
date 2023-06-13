@@ -1,4 +1,4 @@
-import {createBrowserRouter,RouterProvider, Route, createRoutesFromElements} from 'react-router-dom';
+import {createBrowserRouter, createHashRouter, RouterProvider, Route, createRoutesFromElements} from 'react-router-dom';
 // import './App.css';
 import Home from './pages/Home';
 import Store from './pages/Store';
@@ -7,7 +7,7 @@ import RootLayout from './layouts/RootLayout';
 import ShoppingCartProvider from "./context/ShoppingCartContext";
 
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
         <Route path='/' element={<RootLayout />}>
           <Route index element={<Home/>}/>
